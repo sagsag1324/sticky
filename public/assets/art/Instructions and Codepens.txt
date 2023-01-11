@@ -1,0 +1,9 @@
+buttons:
+https://codepen.io/yuhomyan/pen/OJMejWJ
+
+
+gold text:
+https://codepen.io/wagerfield/pen/AxGbVz
+
+image gallery spinning:
+https://codepen.io/nopr/pen/DWrOBm
