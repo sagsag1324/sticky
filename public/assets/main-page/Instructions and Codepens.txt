@@ -1,0 +1,12 @@
+Choose Your Style 2:
+https://codepen.io/gilayos1/pen/OJwmXgy
+
+Choose Your Style 3:
+Radio Buttons:
+https://codepen.io/AngelaVelasquez/pen/DGeErL
+
+Quantity buttons and functionality:
+https://codepen.io/curnsey/pen/LGgvoL
+
+Purchase Buttons with effects:
+https://codepen.io/andrewmillen/pen/MoKLob
