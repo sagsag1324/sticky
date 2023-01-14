@@ -1,6 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/js/text-animation.js": "/js/text-animation.js",
+    "/js/carousel.js": "/js/carousel.js",
     "/css/app-main.css": "/css/app-main.css",
     "/css/app-bootstrap.css": "/css/app-bootstrap.css",
     "/css/app.css": "/css/app.css"

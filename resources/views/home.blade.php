@@ -17,7 +17,6 @@
     {{-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> --}}
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/text-animation.js') }}"></script>
-
 </head>
 
 <body class="container-fluid m-0">
@@ -35,7 +34,7 @@
                 <img class="main-logo" src="{{ asset('assets/main-page/big-logo.png') }}" alt="">
                 <div class="main-buttons-container">
                     <div class="regular-buttons-container mt-3">
-                     
+
                         <x-regular-button :text="'Our Art'" :modelId="'our-art-dialog'" elementId="our-art-btn">
                         </x-regular-button>
                         <x-regular-button :text="'Choose Your Style'" :modelId="'customer-flow'"></x-regular-button>
@@ -56,36 +55,29 @@
         </div>
     </div>
     <div class="row carousel-container">
-        <x-carousel></x-carousel>
+        <x-carousel :carouselName="'main-carousel'">
+            @foreach ($main_stickers as $sticker)
+                <img class="item" src="{{ asset('assets/art/' . $sticker->path) }}" />
+            @endforeach
+        </x-carousel>
     </div>
-    
     {{-- <x-dialog :id="'customer-flow'" /> --}}
     <x-dialog :id="'our-art-dialog'">
-        <div class="animated-text-animation">
+        {{-- <div class="animated-text-animation">
             <div id="container">
                 <div id="message">
                     <a id="animate" href="#">Transmit</a>
                 </div>
             </div>
-        </div>
-        <div class="mt-3">
-            <x-regular-button :text="'Bars'" :buttonNumber="7"></x-regular-button>
-            <x-regular-button :text="'Food'" :buttonNumber="7"></x-regular-button>
-            <x-regular-button :text="'Tattoo Studio'" :buttonNumber="5"></x-regular-button>
-            <x-regular-button :text="'Cars'" :buttonNumber="5"></x-regular-button>
-            <x-regular-button :text="'Furniture'" :buttonNumber="3"></x-regular-button>
-            <x-regular-button :text="'Technology'" :buttonNumber="3"></x-regular-button>
-        </div>
-        <div class="mt-3">
-            <x-regular-button :text="'Cultivation'" :buttonNumber="2"></x-regular-button>
-            <x-regular-button :text="'Cultivation'" :buttonNumber="2"></x-regular-button>
-            <x-regular-button :text="'Tourism'" :buttonNumber="6"></x-regular-button>
-            <x-regular-button :text="'Attractions'" :buttonNumber="6"></x-regular-button>
-            <x-regular-button :text="'Girls Related'" :buttonNumber="11"></x-regular-button>
-            <x-regular-button :text="'Girls Releted'" :buttonNumber="11"></x-regular-button>
-        </div>
+        </div> --}}
+        @foreach ($categories as $category)
+            <x-regular-button :text="$category->title" :buttonNumber="$category->button_style"></x-regular-button>
+        @endforeach
+        <x-carousel class="dinamic-carousel" :carouselName="'dialog-carousel'">
+            @foreach ($stickers as $sticker)
+                <img class="item" src="{{ asset('assets/art/' . $sticker->path) }}" />
+            @endforeach
+        </x-carousel>
     </x-dialog>
-
 </body>
-
 </html>

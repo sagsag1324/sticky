@@ -1107,23 +1107,23 @@
     height: 300px;
   }
 
-  #wrapper {
+  .wrapper {
     width: 100%;
     position: relative;
   }
 
-  #carousel {
+  .carousel {
     overflow: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
   }
 
-  #carousel::-webkit-scrollbar {
+  .carousel::-webkit-scrollbar {
     height: 0;
   }
 
-  #prev,
-  #next {
+  .prev,
+  .next {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -1136,20 +1136,20 @@
     position: absolute;
   }
 
-  #prev {
+  .prev {
     top: 50%;
     left: 0;
     transform: translate(50%, -50%);
     display: none;
   }
 
-  #next {
+  .next {
     top: 50%;
     right: 0;
     transform: translate(-50%, -50%);
   }
 
-  #content {
+  .content {
     display: grid;
     grid-gap: 16px;
     grid-auto-flow: column;
@@ -1211,4 +1211,8 @@
   font-size: 20px;
   font-weight: bold;
   line-height: 1.1;
+}
+
+.modal{
+  background: #000000dd;
 }

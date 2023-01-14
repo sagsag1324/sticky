@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class Carousel extends Component
 {
+
+    public $carousel_name;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($carouselName)
     {
-        //
+        $this->carousel_name = $carouselName;
     }
 
     /**

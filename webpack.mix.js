@@ -13,6 +13,7 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/text-animation.js', 'public/js')
+    .js('resources/js/carousel.js', 'public/js')
     .sass('resources/sass/app-bootstrap.scss', 'public/css')
     .sass('resources/sass/app-main.scss', 'public/css')
     .css('resources/css/app.css', 'public/css')
